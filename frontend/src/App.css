@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9fc; }
+.container { max-width: 900px; margin: 32px auto; background: white; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.center { text-align: center }
+button { padding: 10px 14px; border: none; background: #2b6cb0; color: white; border-radius: 4px; cursor: pointer }
+input, select, textarea { padding: 8px; width: 100%; margin-top: 6px; margin-bottom: 12px; box-sizing: border-box }
+.field { margin-bottom: 12px }
+.plan-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px }
+.card { padding: 12px; border: 1px solid #eee; border-radius: 6px; background: #fafafa }
+.loading { color: #2b6cb0 }
+.mcq { margin-bottom: 12px }
