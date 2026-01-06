@@ -65,7 +65,3 @@ Important
 - No Firebase, no DB, no authentication.
 - Beginner-friendly code with comments.
 
-If you'd like, I can:
-- Hook up a create-react-app scaffold and wire `npm start`.
-- Replace the Gemini REST call with Google's official Python client.
-hhello
