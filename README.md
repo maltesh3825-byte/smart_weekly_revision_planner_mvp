@@ -68,4 +68,8 @@ Important
 If you'd like, I can:
 - Hook up a create-react-app scaffold and wire `npm start`.
 - Replace the Gemini REST call with Google's official Python client.
-hhello
+## Setup
+
+1. Copy `.env.example` to `.env`
+2. Add your Gemini API key to `.env`
+3. Install dependencies: `pip install -r requirements.txt`
