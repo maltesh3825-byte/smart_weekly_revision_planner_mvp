@@ -18,7 +18,8 @@ export default function RevisionInput() {
     setError(null)
     try {
       const body = { subject, chapter, pages, examType, text, mode: 'summary' }
-      const res = await axios.post('http://localhost:5000/generate-revision', body)
+      const apiBase = process.env.REACT_APP_API_URL || 'http://localhost:5000'
+      const res = await axios.post(`${apiBase}/generate-revision`, body)
       const data = res.data
       nav('/plan', { state: { payload: { subject, chapter, pages, examType, text }, result: data } })
     } catch (err) {

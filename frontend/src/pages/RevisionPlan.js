@@ -24,7 +24,8 @@ export default function RevisionPlan() {
     setError(null)
     try {
       const body = { subject: payload?.subject, chapter: payload?.chapter, pages: payload?.pages, examType: payload?.examType, text: payload?.text, mode: 'questions' }
-      const res = await axios.post('http://localhost:5000/generate-revision', body)
+      const apiBase = process.env.REACT_APP_API_URL || 'http://localhost:5000'
+      const res = await axios.post(`${apiBase}/generate-revision`, body)
       const data = res.data
       // navigate to Questions page with the returned questions
       nav('/questions', { state: { questions: data } })
