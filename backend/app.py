@@ -459,12 +459,12 @@ def generate_revision():
         return jsonify({"error": "Server error", "details": error_msg}), 500
 
 
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({"status": "ok", "message": "Revision backend is running"}), 200
+
+
 if __name__ == "__main__":
     # Use the PORT environment variable provided by hosting platforms (e.g., Railway)
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
-
-
-@app.route("/", methods=["GET"]) 
-def index():
-    return jsonify({"status": "ok", "message": "Revision backend is running"}), 200
