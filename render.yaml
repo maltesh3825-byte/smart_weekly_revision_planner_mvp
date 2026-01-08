@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: smart-revision-backend
+    root: backend
+    runtime: python312
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -u app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        scope: runtime
+      - key: GEMINI_MODEL
+        scope: runtime
